@@ -1,6 +1,7 @@
 @import "library";
 @import "reset";
 
+
 // Global templates
 
 %group:after {
@@ -16,12 +17,80 @@
 
 // Global tags
 
+
+// @mixin background-image($image-path1) {
+//     background: url($image-path1) no-repeat center center fixed;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
+
+//   }
+
+
+
+@mixin background-image($name) {
+  $url:"../img/#{$name}.jpg";
+  background: url($url);
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+}
+
+
+
+
+html  {
+  height: 100%
+
+
+
+}
+
+
 body {
-    background: pink;
+
+    height: 100%;
 }
 
 a {
     color: #800000;
 }
 
+
+
 // Everything else
+
+
+
+
+ .img-container-one {
+    @include background-image(1);
+    display: block;
+    min-height: 95%;
+}
+
+ .img-container-two {
+    @include background-image(2);
+    display: block;
+    min-height: 95%;
+}
+
+ .img-container-three {
+    @include background-image(3);
+    display: block;
+    min-height: 95%;
+}
+
+ .img-container-four {
+    @include background-image(4);
+    display: block;
+    min-height: 95%;
+}
+
+
+
+
+

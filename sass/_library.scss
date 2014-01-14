@@ -13,3 +13,8 @@
     border-style: solid;
     border-width: $thickness;
 }
+
+
+@mixin rounded-corners($r: 6px) {
+    border-radius: $r;
+}

@@ -55,10 +55,54 @@ table {
   background-position: 0 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background: pink;
+  height: 100%;
 }
 
 a {
   color: #800000;
+}
+
+.img-container-one {
+  background: url("../img/1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: block;
+  min-height: 95%;
+}
+
+.img-container-two {
+  background: url("../img/2.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: block;
+  min-height: 95%;
+}
+
+.img-container-three {
+  background: url("../img/3.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: block;
+  min-height: 95%;
+}
+
+.img-container-four {
+  background: url("../img/4.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: block;
+  min-height: 95%;
 }
