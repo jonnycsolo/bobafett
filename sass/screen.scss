@@ -56,25 +56,33 @@ a {
  .img-container-one {
     @include background-image(1);
     display: block;
+    position: relative;
     min-height: 95%;
+    min-width: 100%
 }
 
  .img-container-two {
     @include background-image(2);
     display: block;
+    position: relative;
     min-height: 95%;
+    min-width: 100%
 }
 
  .img-container-three {
     @include background-image(3);
     display: block;
+    position: relative;
     min-height: 95%;
+    min-width: 100%
 }
 
  .img-container-four {
     @include background-image(4);
     display: block;
+    position: relative;
     min-height: 95%;
+    min-width: 100%
 }
 
 

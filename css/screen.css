@@ -74,7 +74,9 @@ a {
   -o-background-size: cover;
   background-size: cover;
   display: block;
+  position: relative;
   min-height: 95%;
+  min-width: 100%;
 }
 
 .img-container-two {
@@ -84,7 +86,9 @@ a {
   -o-background-size: cover;
   background-size: cover;
   display: block;
+  position: relative;
   min-height: 95%;
+  min-width: 100%;
 }
 
 .img-container-three {
@@ -94,7 +98,9 @@ a {
   -o-background-size: cover;
   background-size: cover;
   display: block;
+  position: relative;
   min-height: 95%;
+  min-width: 100%;
 }
 
 .img-container-four {
@@ -104,5 +110,7 @@ a {
   -o-background-size: cover;
   background-size: cover;
   display: block;
+  position: relative;
   min-height: 95%;
+  min-width: 100%;
 }
