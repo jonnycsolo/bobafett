@@ -73,9 +73,10 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0 auto;
   display: block;
   position: relative;
-  min-height: 95%;
+  min-height: 100%;
   min-width: 100%;
 }
 
@@ -85,9 +86,10 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0 auto;
   display: block;
   position: relative;
-  min-height: 95%;
+  min-height: 100%;
   min-width: 100%;
 }
 
@@ -97,9 +99,10 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0 auto;
   display: block;
   position: relative;
-  min-height: 95%;
+  min-height: 100%;
   min-width: 100%;
 }
 
@@ -109,8 +112,58 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0 auto;
   display: block;
   position: relative;
-  min-height: 95%;
+  min-height: 100%;
   min-width: 100%;
+}
+
+.footer-bar-reboot-blue {
+  width: 100%;
+  height: 7%;
+  background: #3CDDFF;
+  z-index: 1;
+  display: block;
+}
+
+.footer-bar-cyan-green {
+  width: 100%;
+  height: 7%;
+  background: #92FE96;
+  z-index: 1;
+  display: block;
+}
+
+.footer-bar-boba-purp {
+  width: 100%;
+  height: 7%;
+  background: #9179E7;
+  z-index: 1;
+  display: block;
+}
+
+.header-bar-galaxy-orange {
+  background: #FF8B00;
+  background: #FF8700;
+  width: 100%;
+  height: 7%;
+  z-index: 1;
+  display: block;
+}
+
+.footer-bar-naboo-yellow {
+  background: #FFC20D;
+  width: 100%;
+  height: 7%;
+  z-index: 1;
+  display: block;
+}
+
+.footer-bar-ikb {
+  background: #0033CC;
+  width: 100%;
+  height: 7%;
+  z-index: 1;
+  display: block;
 }
