@@ -28,7 +28,12 @@
 
 }
 
-
+@mixin page-set {
+    display: block;
+    position: relative;
+    min-height: 100%;
+    min-width: 100%
+}
 
 
 html  {
@@ -57,185 +62,120 @@ a {
 
  .img-container-one {
     @include background-image(1);
-
-    display: block;
-    position: relative;
-    min-height: 100%;
-    min-width: 100%
+    @include page-set
 }
+
+$thin-border: 1px solid white;
+
+@import "stats";
 
  .img-container-two {
     @include background-image(2);
-    display: block;
-    position: relative;
-    min-height: 100%;
-    min-width: 100%
+    @include page-set;
+    .bio {
+        margin-left: 15%;
+        padding-top: 115px;
+        p {
+          font-size: 16pt;
+        }
+  }
+  footer {
+    float: right;
+    margin-right: 50px;
+    text-align: right;
+    color: white;
+    width: 300px;
+    font-family: 'VT323', cursive;
+    font-size: 20pt;
+
+  }
 }
 
  .img-container-three {
     @include background-image(3);
-    display: block;
-    position: relative;
-    min-height: 100%;
-    min-width: 100%
+    @include page-set
 }
 
  .img-container-four {
     @include background-image(4);
-    display: block;
-    position: relative;
-    min-height: 100%;
-    min-width: 100%
+    @include page-set
 }
 
-.footer-bar-reboot-blue {
-  width: 100%;
-  height: 7%;
-  background: #3CDDFF;
-  z-index: 1;
-  display: block;
-}
-
-.footer-bar-cyan-green {
-  width: 100%;
-  height: 7%;
-  background: #92FE96;
-  z-index: 1;
-  display: block;
-}
-
-.footer-bar-boba-purp {
-  width: 100%;
-  height: 7%;
-  background: #9179E7;
-  z-index: 1;
-  display: block;
-}
-
-  .header-bar-galaxy-orange {
-    // background: #FFB24C;
-    background: #FF8B00;
-    background: #FF8700;
-    width: 100%;
-    height: 7%;
-    z-index: 1;
-    display: block;
-  }
-
-.footer-bar-naboo-yellow {
-  background: #FFC20D;
-    width: 100%;
-    height: 7%;
-    z-index: 1;
-    display: block;
-}
-
-.footer-bar-ikb {
-  background: #0033CC;
-    width: 100%;
-    height: 7%;
-    z-index: 1;
-    display: block;
-}
-
-/****** THOUGHT BUBBLE *****/
-.thought {
+.sidebar {
   float: right;
-position:relative; /*see the support section below for more info*/
-width:400px; /*size of the bubble*/
-padding:20px 40px;
-margin:40px 10px 80px 40px;
-/**give the bubble's background a gradient**/
-background:#f7a944; /*fallback colour for non-supporting browsers*/
-background:-webkit-gradient(linear, 0 0, 0 100%, from(#fac868), to(#f3961c));
-background:-moz-linear-gradient(#fac868, #f3961c);
-background:-o-linear-gradient(#fac868, #f3961c);
-background:linear-gradient(#fac868, #f3961c);
-/**give the corners a large curve**/
--webkit-border-radius:180px;
--moz-border-radius:180px;
-border-radius:180px;
-/**add a drop shadow to the bubble**/
--webkit-box-shadow: -3px 4px 8px #989898;
--moz-box-shadow: -3px 4px 8px #989898;
-box-shadow: -3px 4px 8px #989898;
-/**style the text**/
-color:#575544;
-font-size:1em;
-letter-spacing:.06em;
+  width: 35%;
+  margin: 15px 20px;
+  p {
+    color: white;
+    padding-left: 90px;
+    text-align: center;
+    font-family: 'VT323', cursive;
+    font-size: 16pt;
+  }
 }
 
-/******CIRCLES*****/
-/****LARGE CIRCLE***/
-p.thought:before {
-content:"";
-position:absolute; /*see the support section below for more info*/
-bottom:-40px; /*distance from the bottom of the bubble*/
-left:20px; /*distance from the left edge of the bubble*/
-background:#f3961c;
-width:30px; /*same as the height*/
-height:30px; /*same as the width*/
-/*add a curve to the corners the same size as the height and width*/
--webkit-border-radius:30px;
--moz-border-radius:30px;
-border-radius:30px;
-/*add a drop shadow*/
--webkit-box-shadow: -3px 3px 4px #989898;
--moz-box-shadow: -3px 3px 4px #989898;
-box-shadow: -3px 3px 8px #989898;
-}
-/*****SMALL CIRCLE***/
-/**Created exactly the same way as the large circle, except with smaller width, height and border-radius**/
-p.thought:after {
-content:"";
-position:absolute;
-bottom:-55px;
-left:0;
-width:15px;
-height:15px;
-background:#f3961c;
+$secondary: rgba(255,255,255,0.5);
+$primary: darken($secondary, 20%);
+
+
+/***** FIRST CREATE THE BUBBLE ****/
+p.border {
+font-family: 'Covered By Your Grace', cursive;
+text-align: left;
+font-size: 38px;
+color: white;
+position:relative; /*see the support section below for more info*/
+width:350px; /*size of the bubble*/
+background: $secondary; /*same as the container background*/
+padding:15px;
+color:#333;
+/*add the bubble outline*/
+/*give the bubble curved corners*/
 -webkit-border-radius:15px;
 -moz-border-radius:15px;
 border-radius:15px;
--webkit-box-shadow: -3px 3px 4px #989898;
--moz-box-shadow: -3px 3px 4px #989898;
-box-shadow: -3px 3px 8px #989898;
 }
-
-
-/*SPEECH BUBBLE*/
-blockquote.quote {
-position:absolute; /*see the support section below for more info*/
-right: 10px;
-width:400px; /*size of the bubble*/
-padding:20px;
-margin:20px 0 30px 40px;
-color:#f6edf6;
-
-/**Give the corners a curve **/
--webkit-border-radius: 0px 0px /60px;
--moz-border-radius:30px /60px;
-border-radius:30px /60px; /* the second value, preceded by a / defines the vertical radius*/
-/**Add a gradient to the background of the bubble**/
-background:#c49bc4; /*required for browsers that don't support gradients*/
-background:-webkit-gradient(#7e527f, #c49bc4);
-background:-moz-linear-gradient(#7e527f, #c49bc4);
-background:-o-linear-gradient(#7e527f, #c49bc4);
-background:linear-gradient(#7e527f, #c49bc4);
-}
-/*****NOW CREATE THE TRIANGLE*****/
-/**because this is an obtuse triangle we'll create it in two sections**/
-/**First the coloured section that you see as the triangle**/
-blockquote.quote:before {
+/***** CREATE THE TRIANGLE *****/
+/*****FINALLY MAKE THE CENTRE OF THE TRIANGLE TRANPARENT****/
+p.border:after {
 content:"";
 position:absolute; /*see the support section below for more info*/
-bottom:-30px; /*height of the triangle*/
-right:80px; /*distance from the right edge of the bubble*/
-border-width:0 0 30px 60px; /*3rd value is height of the triangle and must be same as bottom*/
+bottom:-20px; /* value = -(border-top-width - border-bottom-width) */
+left: 45px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+border-width:20px 20px 0 20px;
 border-style:solid;
-border-color:transparent #c49bc4; /*colour of the triangle*/
+border-color: $secondary transparent; /*colour should be the same as the container background*/
+
 }
 
+p.opposite {
+font-family: 'Covered By Your Grace', cursive;
+text-align: left;
+font-size: 38px;
+color: white;
+position:relative; /*see the support section below for more info*/
+width:350px; /*size of the bubble*/
+background: $secondary; /*same as the container background*/
+padding:15px;
+color:#333;
+/*add the bubble outline*/
+/*give the bubble curved corners*/
+-webkit-border-radius:15px;
+-moz-border-radius:15px;
+border-radius:15px;
+}
+/***** CREATE THE TRIANGLE *****/
+/*****FINALLY MAKE THE CENTRE OF THE TRIANGLE TRANPARENT****/
+p.opposite:after {
+content:"";
+position:absolute; /*see the support section below for more info*/
+bottom:-20px; /* value = -(border-top-width - border-bottom-width) */
+right: 45px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+border-width:20px 20px 0 20px;
+border-style:solid;
+border-color: $secondary transparent; /*colour should be the same as the container background*/
+
+}
 
 
 

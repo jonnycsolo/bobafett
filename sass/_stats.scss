@@ -1,0 +1,42 @@
+.stats-container {
+    background: rgba(0, 0, 0, .7);
+    color: rgba(255,255,255,0.8);
+    border-right: $thin-border;
+    border-left: $thin-border;
+    border-bottom: $thin-border;
+    font-family: 'VT323', cursive;
+    font-size: 16pt;
+    float: left;
+    width: 325px;
+    height: 325px;
+    border-radius: 0 0 5px 5px;
+    margin-left: 50px;
+    padding: 0px;
+    h2 {
+    font-size: 35pt;
+    font-family: 'Geostar', sans-serif;
+    color: red;
+    border-bottom: 1px solid red;
+    margin: 15px 0px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    }
+    td {
+        padding: 5px 10px;
+    }
+    .stat {
+        font-weight: bold;
+        text-align: right;
+        text-decoration: underline;
+    }
+ }
+
+ .right {
+  float: right;
+  margin-right: 50px;
+  width: 350px;
+  height: 85px;
+  h2 {
+    border-bottom: none;
+  }
+ }
