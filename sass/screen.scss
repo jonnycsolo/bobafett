@@ -17,8 +17,9 @@
 
 
 @mixin background-image($name) {
+
   $url:"../img/#{$name}.jpg";
-  background: url($url);
+  background: url($url) no-repeat top center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -47,6 +48,7 @@ html  {
 body {
 
     height: 100%;
+
 }
 
 a {
@@ -62,8 +64,22 @@ a {
 
  .img-container-one {
     @include background-image(1);
-    @include page-set
+    @include page-set;
+       footer {
+        position: absolute;
+
+      margin-top: 400px;
+      margin-left: 60%;
+      padding-right: 5%;
+      text-align: left;
+      color: white;
+      min-width: 250px;
+      font-family: 'VT323', cursive;
+      font-size: 20pt;
+      display: inline-block;
+  }
 }
+
 
 $thin-border: 1px solid white;
 
@@ -73,36 +89,64 @@ $thin-border: 1px solid white;
     @include background-image(2);
     @include page-set;
     .bio {
-        margin-left: 15%;
+        margin-left: 5%;
         padding-top: 115px;
         p {
           font-size: 16pt;
         }
   }
-  footer {
-    float: right;
-    margin-right: 50px;
-    text-align: right;
-    color: white;
-    width: 300px;
-    font-family: 'VT323', cursive;
-    font-size: 20pt;
+   footer {
+     position: absolute;
+
+      margin-top: 400px;
+      margin-left: 60%;
+      padding-right: 5%;
+      text-align: left;
+      color: white;
+      min-width: 250px;
+      font-family: 'VT323', cursive;
+      font-size: 20pt;
+      display: inline-block;
 
   }
 }
 
  .img-container-three {
     @include background-image(3);
-    @include page-set
+    @include page-set;
+     footer {
+      position: absolute;
+      margin-top: 600px;
+      margin-left: 60%;
+      padding-right: 5%;
+      text-align: right;
+      color: white;
+      min-width: 250px;
+      font-family: 'VT323', cursive;
+      font-size: 20pt;
+      display: inline-block;
+  }
 }
 
  .img-container-four {
     @include background-image(4);
-    @include page-set
+    @include page-set;
+    footer {
+      position: absolute;
+      margin-top: 500px;
+      margin-left: 60%;
+      padding-right: 5%;
+      text-align: right;
+      color: white;
+      min-width: 250px;
+      font-family: 'VT323', cursive;
+      font-size: 20pt;
+      display: inline-block;
+  }
 }
 
 .sidebar {
-  float: right;
+
   width: 35%;
   margin: 15px 20px;
   p {
@@ -119,16 +163,63 @@ $primary: darken($secondary, 20%);
 
 
 /***** FIRST CREATE THE BUBBLE ****/
-p.border {
+p.banner {
+  float: left;
+position: absolute;
+display: inline-block;
+font-family: 'Covered By Your Grace', cursive;
+margin-top: 450px;
+margin-left: 5%;
+line-height: 1em;
+color: black;
+font-weight:bold;
+
+font-size: 134px;
+position: absolute;
+text-align: left;
+font-size: 38px;
+width:350px; /*size of the bubble*/
+background: #f8f3c2; /* Old browsers */
+background: -moz-linear-gradient(top, #f8f3c2 0%, #f6f0b2 40%, #f3eb99 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f3c2), color-stop(40%,#f6f0b2), color-stop(100%,#f3eb99)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #f8f3c2 0%,#f6f0b2 40%,#f3eb99 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #f8f3c2 0%,#f6f0b2 40%,#f3eb99 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #f8f3c2 0%,#f6f0b2 40%,#f3eb99 100%); /* IE10+ */
+background: linear-gradient(to bottom, #f8f3c2 0%,#f6f0b2 40%,#f3eb99 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f3c2', endColorstr='#f3eb99',GradientType=0 ); /* IE6-9 */
+padding:15px;
+
+/*curved corners*/
+-webkit-border-radius:15px;
+-moz-border-radius:15px;
+border-radius:15px;
+}
+
+/***** CREATE THE TRIANGLE *****/
+/*****FINALLY MAKE THE CENTRE OF THE TRIANGLE TRANPARENT****/
+// p.banner:after {
+// content:"";
+// position:absolute; /*see the support section below for more info*/
+// bottom:-20px; /* value = -(border-top-width - border-bottom-width) */
+// left: 45px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+// border-width:20px 20px 0 20px;
+// border-style:solid;
+// border-color: $secondary transparent; /*colour should be the same as the container background*/
+
+// }
+
+.opposite {
+text-shadow: 0 3px 6px #222,0 3px 6px #333;
 font-family: 'Covered By Your Grace', cursive;
 text-align: left;
 font-size: 38px;
 color: white;
-position:relative; /*see the support section below for more info*/
+position: absolute; /*see the support section below for more info*/
+display: inline-block;
 width:350px; /*size of the bubble*/
 background: $secondary; /*same as the container background*/
 padding:15px;
-color:#333;
+
 /*add the bubble outline*/
 /*give the bubble curved corners*/
 -webkit-border-radius:15px;
@@ -137,43 +228,36 @@ border-radius:15px;
 }
 /***** CREATE THE TRIANGLE *****/
 /*****FINALLY MAKE THE CENTRE OF THE TRIANGLE TRANPARENT****/
-p.border:after {
-content:"";
-position:absolute; /*see the support section below for more info*/
-bottom:-20px; /* value = -(border-top-width - border-bottom-width) */
-left: 45px; /* value = (:before left) + (:before border-left) - (:after border-left) */
-border-width:20px 20px 0 20px;
-border-style:solid;
-border-color: $secondary transparent; /*colour should be the same as the container background*/
-
-}
-
-p.opposite {
-font-family: 'Covered By Your Grace', cursive;
-text-align: left;
-font-size: 38px;
-color: white;
-position:relative; /*see the support section below for more info*/
-width:350px; /*size of the bubble*/
-background: $secondary; /*same as the container background*/
-padding:15px;
-color:#333;
-/*add the bubble outline*/
-/*give the bubble curved corners*/
--webkit-border-radius:15px;
--moz-border-radius:15px;
-border-radius:15px;
-}
-/***** CREATE THE TRIANGLE *****/
-/*****FINALLY MAKE THE CENTRE OF THE TRIANGLE TRANPARENT****/
-p.opposite:after {
+.opposite:after {
 content:"";
 position:absolute; /*see the support section below for more info*/
 bottom:-20px; /* value = -(border-top-width - border-bottom-width) */
 right: 45px; /* value = (:before left) + (:before border-left) - (:after border-left) */
 border-width:20px 20px 0 20px;
 border-style:solid;
-border-color: $secondary transparent; /*colour should be the same as the container background*/
+border-color: $primary transparent; /*colour should be the same as the container background*/
+
+}
+
+.middle-quote{
+  background: $secondary;
+  text-align: right;
+  padding: 10px;
+  color: #8F74F0;
+  border-radius: 15px;
+  margin-top: 30%;
+  margin-left: 7%;
+  position: absolute;
+  display: block;
+  width: 20%;
+  min-width: 200px;
+  font-family: 'Walter Turncoat', cursive;
+  font-size: 30px;
+  text-shadow: 0 3px 6px #222,0 3px 6px #333;
+  line-height: 40px;
+  border-style: solid;
+  border-color: $secondary transparent;
+
 
 }
 

@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=VT323);
 @import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
 @import url(http://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
 @import url(http://fonts.googleapis.com/css?family=Geostar);
@@ -73,7 +74,7 @@ a {
 }
 
 .img-container-one {
-  background: url("../img/1.jpg");
+  background: url("../img/1.jpg") no-repeat top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -85,8 +86,22 @@ a {
   min-height: 100%;
   min-width: 100%;
 }
+.img-container-one footer {
+  position: absolute;
+  margin-top: 400px;
+  margin-left: 60%;
+  padding-right: 5%;
+  text-align: left;
+  color: white;
+  min-width: 250px;
+  font-family: 'VT323', cursive;
+  font-size: 20pt;
+  display: inline-block;
+}
 
 .stats-container {
+  position: absolute;
+  display: block;
   background: rgba(0, 0, 0, 0.7);
   color: rgba(255, 255, 255, 0.8);
   border-right: 1px solid white;
@@ -130,7 +145,7 @@ a {
 }
 
 .img-container-two {
-  background: url("../img/2.jpg");
+  background: url("../img/2.jpg") no-repeat top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -143,24 +158,27 @@ a {
   min-width: 100%;
 }
 .img-container-two .bio {
-  margin-left: 15%;
+  margin-left: 5%;
   padding-top: 115px;
 }
 .img-container-two .bio p {
   font-size: 16pt;
 }
 .img-container-two footer {
-  float: right;
-  margin-right: 50px;
-  text-align: right;
+  position: absolute;
+  margin-top: 400px;
+  margin-left: 60%;
+  padding-right: 5%;
+  text-align: left;
   color: white;
-  width: 300px;
+  min-width: 250px;
   font-family: 'VT323', cursive;
   font-size: 20pt;
+  display: inline-block;
 }
 
 .img-container-three {
-  background: url("../img/3.jpg");
+  background: url("../img/3.jpg") no-repeat top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -171,10 +189,22 @@ a {
   position: relative;
   min-height: 100%;
   min-width: 100%;
+}
+.img-container-three footer {
+  position: absolute;
+  margin-top: 600px;
+  margin-left: 60%;
+  padding-right: 5%;
+  text-align: right;
+  color: white;
+  min-width: 250px;
+  font-family: 'VT323', cursive;
+  font-size: 20pt;
+  display: inline-block;
 }
 
 .img-container-four {
-  background: url("../img/4.jpg");
+  background: url("../img/4.jpg") no-repeat top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -186,9 +216,20 @@ a {
   min-height: 100%;
   min-width: 100%;
 }
+.img-container-four footer {
+  position: absolute;
+  margin-top: 500px;
+  margin-left: 60%;
+  padding-right: 5%;
+  text-align: right;
+  color: white;
+  min-width: 250px;
+  font-family: 'VT323', cursive;
+  font-size: 20pt;
+  display: inline-block;
+}
 
 .sidebar {
-  float: right;
   width: 35%;
   margin: 15px 20px;
 }
@@ -201,21 +242,40 @@ a {
 }
 
 /***** FIRST CREATE THE BUBBLE ****/
-p.border {
+p.banner {
+  float: left;
+  position: absolute;
+  display: inline-block;
   font-family: 'Covered By Your Grace', cursive;
+  margin-top: 450px;
+  margin-left: 5%;
+  line-height: 1em;
+  color: black;
+  font-weight: bold;
+  font-size: 134px;
+  position: absolute;
   text-align: left;
   font-size: 38px;
-  color: white;
-  position: relative;
-  /*see the support section below for more info*/
   width: 350px;
   /*size of the bubble*/
-  background: rgba(255, 255, 255, 0.5);
-  /*same as the container background*/
+  background: #f8f3c2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f8f3c2 0%, #f6f0b2 40%, #f3eb99 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f8f3c2), color-stop(40%, #f6f0b2), color-stop(100%, #f3eb99));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f8f3c2 0%, #f6f0b2 40%, #f3eb99 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f8f3c2 0%, #f6f0b2 40%, #f3eb99 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f8f3c2 0%, #f6f0b2 40%, #f3eb99 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f8f3c2 0%, #f6f0b2 40%, #f3eb99 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f3c2', endColorstr='#f3eb99',GradientType=0 );
+  /* IE6-9 */
   padding: 15px;
-  color: #333;
-  /*add the bubble outline*/
-  /*give the bubble curved corners*/
+  /*curved corners*/
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -223,33 +283,20 @@ p.border {
 
 /***** CREATE THE TRIANGLE *****/
 /*****FINALLY MAKE THE CENTRE OF THE TRIANGLE TRANPARENT****/
-p.border:after {
-  content: "";
+.opposite {
+  text-shadow: 0 3px 6px #222,0 3px 6px #333;
+  font-family: 'Covered By Your Grace', cursive;
+  text-align: left;
+  font-size: 38px;
+  color: white;
   position: absolute;
   /*see the support section below for more info*/
-  bottom: -20px;
-  /* value = -(border-top-width - border-bottom-width) */
-  left: 45px;
-  /* value = (:before left) + (:before border-left) - (:after border-left) */
-  border-width: 20px 20px 0 20px;
-  border-style: solid;
-  border-color: rgba(255, 255, 255, 0.5) transparent;
-  /*colour should be the same as the container background*/
-}
-
-p.opposite {
-  font-family: 'Covered By Your Grace', cursive;
-  text-align: left;
-  font-size: 38px;
-  color: white;
-  position: relative;
-  /*see the support section below for more info*/
+  display: inline-block;
   width: 350px;
   /*size of the bubble*/
   background: rgba(255, 255, 255, 0.5);
   /*same as the container background*/
   padding: 15px;
-  color: #333;
   /*add the bubble outline*/
   /*give the bubble curved corners*/
   -webkit-border-radius: 15px;
@@ -259,7 +306,7 @@ p.opposite {
 
 /***** CREATE THE TRIANGLE *****/
 /*****FINALLY MAKE THE CENTRE OF THE TRIANGLE TRANPARENT****/
-p.opposite:after {
+.opposite:after {
   content: "";
   position: absolute;
   /*see the support section below for more info*/
@@ -269,6 +316,26 @@ p.opposite:after {
   /* value = (:before left) + (:before border-left) - (:after border-left) */
   border-width: 20px 20px 0 20px;
   border-style: solid;
-  border-color: rgba(255, 255, 255, 0.5) transparent;
+  border-color: rgba(204, 204, 204, 0.5) transparent;
   /*colour should be the same as the container background*/
+}
+
+.middle-quote {
+  background: rgba(255, 255, 255, 0.5);
+  text-align: right;
+  padding: 10px;
+  color: #8F74F0;
+  border-radius: 15px;
+  margin-top: 30%;
+  margin-left: 7%;
+  position: absolute;
+  display: block;
+  width: 20%;
+  min-width: 200px;
+  font-family: 'Walter Turncoat', cursive;
+  font-size: 30px;
+  text-shadow: 0 3px 6px #222,0 3px 6px #333;
+  line-height: 40px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5) transparent;
 }
