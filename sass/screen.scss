@@ -65,6 +65,7 @@ a {
  .img-container-one {
     @include background-image(1);
     @include page-set;
+
        footer {
         position: absolute;
 
@@ -77,7 +78,9 @@ a {
       font-family: 'VT323', cursive;
       font-size: 20pt;
       display: inline-block;
+
   }
+  margin: 0 auto;
 }
 
 
@@ -132,13 +135,14 @@ $thin-border: 1px solid white;
     @include background-image(4);
     @include page-set;
     footer {
+
       position: absolute;
       margin-top: 500px;
       margin-left: 60%;
-      padding-right: 5%;
-      text-align: right;
+      padding-right: 20%;
+      text-align: left;
       color: white;
-      min-width: 250px;
+      min-width: 45%;
       font-family: 'VT323', cursive;
       font-size: 20pt;
       display: inline-block;
@@ -262,4 +266,120 @@ border-color: $primary transparent; /*colour should be the same as the container
 }
 
 
+//RESPONSIVENESS
+
+@media screen and (max-width: 500px)
+{
+  p.banner {
+
+  position: absolute;
+  display: inline-block;
+  font-family: 'Covered By Your Grace', cursive;
+  margin-top: 90%;
+
+
+  line-height: 1em;
+  color: black;
+  font-weight:bold;
+
+  font-size: 134px;
+  position: absolute;
+  text-align: left;
+  font-size: 38px;
+  width: 82%; /*size of the bubble*/
+  background: #f8f3c2; /* Old browsers */
+  background: -moz-linear-gradient(top, #f8f3c2 0%, #f6f0b2 40%, #f3eb99 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f3c2), color-stop(40%,#f6f0b2), color-stop(100%,#f3eb99)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f8f3c2 0%,#f6f0b2 40%,#f3eb99 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f8f3c2 0%,#f6f0b2 40%,#f3eb99 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f8f3c2 0%,#f6f0b2 40%,#f3eb99 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #f8f3c2 0%,#f6f0b2 40%,#f3eb99 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f3c2', endColorstr='#f3eb99',GradientType=0 ); /* IE6-9 */
+  padding:15px;
+
+  /*curved corners*/
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  border-radius:15px;
+    }
+
+    .img-container-one {
+
+     footer {
+      display: block;
+       position: relative;
+
+        margin-top: 470px;
+        margin-left: 10%;
+        ;
+        text-align: left;
+        color: white;
+        min-width: 90%;
+        font-family: 'VT323', cursive;
+        font-size: 20pt;
+        display: inline-block;
+
+    }
+  }
+
+   .img-container-two {
+
+     footer {
+      display: block;
+       position: relative;
+
+        margin-top: 400px;
+        margin-left: 10%;
+        ;
+        text-align: left;
+        color: white;
+        min-width: 90%;
+        font-family: 'VT323', cursive;
+        font-size: 20pt;
+        display: inline-block;
+
+    }
+  }
+
+
+
+   .img-container-three {
+
+     footer {
+      display: block;
+       position: relative;
+
+        margin-top: 470px;
+        margin-left: 10%;
+        ;
+        text-align: left;
+        color: white;
+        min-width: 90%;
+        font-family: 'VT323', cursive;
+        font-size: 20pt;
+        display: inline-block;
+
+    }
+
+  }
+
+     .img-container-four {
+
+     footer {
+      display: block;
+       position: relative;
+
+        margin-top: 470px;
+        margin-left: 10%;
+        ;
+        text-align: left;
+        color: white;
+        min-width: 90%;
+        font-family: 'VT323', cursive;
+        font-size: 20pt;
+        display: inline-block;
+    }
+}
+
+}
 

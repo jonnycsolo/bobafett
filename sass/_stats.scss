@@ -1,4 +1,5 @@
 .stats-container {
+    padding: 4px;
     position: absolute;
     display: block;
     background: rgba(0, 0, 0, .7);
@@ -9,7 +10,7 @@
     font-family: 'VT323', cursive;
     font-size: 16pt;
     float: left;
-    width: 325px;
+    width: 425px;
     height: 325px;
     border-radius: 0 0 5px 5px;
     margin-left: 50px;
@@ -36,7 +37,7 @@
  .right {
   float: right;
   margin-right: 50px;
-  width: 350px;
+  width: 370px;
   height: 85px;
   h2 {
     border-bottom: none;
